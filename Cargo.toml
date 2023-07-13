@@ -2,5 +2,13 @@
 name = "decline-word"
 version = "0.1.0"
 edition = "2021"
+description = "Choose word form based on given number"
+license = "MIT OR Apache-2.0"
+authors = ["Eugene Lebedev <eugene.0x90@gmail.com>"]
+homepage = "https://github.com/lebe-dev/decline-word"
+repository = "https://github.com/lebe-dev/decline-word"
+readme = "README.md"
+keywords = ["decline", "word", "number"]
+categories = ["text-processing"]
 
 [dependencies]
