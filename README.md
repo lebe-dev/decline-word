@@ -3,15 +3,16 @@
 How to use:
 
 ```rust
-let word_forms = ("минута", "минуты", "минут");
+let value = decline_for_num(12412, &("минута", "минуты", "минут"));
+println!("{value}");
 
-let value = decline_for_num(12412, &word_forms);
-
+let value = decline_for_num(387222, &("рубль", "рубля", "рублей"));
 println!("{value}");
 ```
 
-Example output:
+Example output 1 & 2:
 
 ```shell
 минут
+рубля
 ```
