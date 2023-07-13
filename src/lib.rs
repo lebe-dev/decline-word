@@ -14,7 +14,7 @@ pub fn decline_for_num(value: i32, word_forms: &(&str, &str, &str)) -> String {
         return word_forms.0.to_string()
     }
 
-    return word_forms.2.to_string()
+    word_forms.2.to_string()
 }
 
 #[cfg(test)]
@@ -36,7 +36,7 @@ mod tests {
     fn second_form_tests() {
         let word_forms = get_word_forms();
 
-        vec![29373, 8234, 982562].iter().for_each(|v| {
+        vec![29373, 8234, 982562, 40283, 60784].iter().for_each(|v| {
             let form = decline_for_num(*v, &word_forms);
 
             assert_eq!(word_forms.1, form);
@@ -47,7 +47,7 @@ mod tests {
     fn third_form_tests() {
         let word_forms = get_word_forms();
 
-        vec![17, 19, 567827].iter().for_each(|v| {
+        vec![17, 19, 567827, 28, 738, 20000].iter().for_each(|v| {
             let form = decline_for_num(*v, &word_forms);
 
             assert_eq!(word_forms.2, form);
