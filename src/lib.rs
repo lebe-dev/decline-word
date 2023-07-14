@@ -1,5 +1,5 @@
 /// Get word form for given value
-pub fn decline_for_num(value: i32, word_forms: &(&str, &str, &str)) -> String {
+pub fn decline_for_num(value: i64, word_forms: &(&str, &str, &str)) -> String {
     let n = value.abs() % 100;
 
     let n1 = n % 10;
@@ -23,34 +23,24 @@ mod tests {
 
     #[test]
     fn first_form_tests() {
-        let word_forms = get_word_forms();
-
-        vec![19251, 329981, 5918271, 70000021].iter().for_each(|v| {
-            let form = decline_for_num(*v, &word_forms);
-
-            assert_eq!(word_forms.0, form);
-        })
+        check_form("минута", vec![19251, 329981, 5918271, 70000021])
     }
 
     #[test]
     fn second_form_tests() {
-        let word_forms = get_word_forms();
-
-        vec![29373, 8234, 982562, 40283, 60784].iter().for_each(|v| {
-            let form = decline_for_num(*v, &word_forms);
-
-            assert_eq!(word_forms.1, form);
-        })
+        check_form("минуты", vec![29373, 8234, 982562, 40283, 60784])
     }
 
     #[test]
     fn third_form_tests() {
+        check_form("минут", vec![17, 19, 567827, 28, 738, 20000])
+    }
+
+    fn check_form(expected_form: &str, numbers: Vec<i64>) {
         let word_forms = get_word_forms();
-
-        vec![17, 19, 567827, 28, 738, 20000].iter().for_each(|v| {
+        numbers.iter().for_each(|v| {
             let form = decline_for_num(*v, &word_forms);
-
-            assert_eq!(word_forms.2, form);
+            assert_eq!(expected_form, form);
         })
     }
 
