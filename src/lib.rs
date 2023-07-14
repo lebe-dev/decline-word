@@ -25,17 +25,17 @@ mod tests {
 
     #[test]
     fn first_form_tests() {
-        check_form("минута", vec![19251, 329981, 5918271, 70000021])
+        check_form("минута", vec![1, 751, 19251, 329981, 5918271, 70000021])
     }
 
     #[test]
     fn second_form_tests() {
-        check_form("минуты", vec![29373, 8234, 982562, 40283, 60784])
+        check_form("минуты", vec![2, 3, 4, 29373, 8234, 982562, 40283, 60784])
     }
 
     #[test]
     fn third_form_tests() {
-        check_form("минут", vec![17, 19, 567827, 28, 738, 20000])
+        check_form("минут", vec![0, 5, 10, 17, 19, 567827, 28, 738, 20000])
     }
 
     fn check_form(expected_form: &str, numbers: Vec<i64>) {
