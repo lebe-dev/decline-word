@@ -4,17 +4,19 @@ pub fn decline_for_num(value: i64, word_forms: &(&str, &str, &str)) -> String {
 
     let n1 = n % 10;
 
-    if n > 10 && n < 20 {
-        return word_forms.2.to_string()
+    (if n > 10 && n < 20 {
+        word_forms.2
 
     } else if n1 > 1 && n1 < 5 {
-        return word_forms.1.to_string()
+        word_forms.1
 
     } else if n1 == 1 {
-        return word_forms.0.to_string()
-    }
+        word_forms.0
 
-    word_forms.2.to_string()
+    } else {
+        word_forms.2
+
+    }).to_string()
 }
 
 #[cfg(test)]
