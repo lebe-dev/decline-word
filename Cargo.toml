@@ -1,6 +1,6 @@
 [package]
 name = "decline-word"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Choose word form based on given number"
 license = "MIT OR Apache-2.0"
