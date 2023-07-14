@@ -1,6 +1,12 @@
 # decline word
 
-How to use:
+**1. Add dependency:**
+
+```
+cargo add decline-word
+```
+
+**2. Use:**
 
 ```rust
 let value = decline_for_num(12412, &("минута", "минуты", "минут"));
@@ -10,7 +16,7 @@ let value = decline_for_num(387222, &("рубль", "рубля", "рублей"
 println!("{value}");
 ```
 
-Example output 1 & 2:
+Output:
 
 ```shell
 минут
